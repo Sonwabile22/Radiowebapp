@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mock Radio Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎙️ Mock Radio Player</h1>
+  <div id="mode">Loading...</div>
+
+  <audio id="player" controls autoplay></audio>
+  
+  <div>
+    <button id="playECRadio">▶️ Play East Coast Radio</button>
+    <button id="skipBtn">⏭️ Skip</button>
+  </div>
+
+  <h3>Currently Playing:</h3>
+  <div id="currentTrack">None</div>
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+  </div>
+  <div id="timer">00:00 / 00:00</div>
+
+  <h3>Next 3 Tracks:</h3>
+  <ul id="nextTracks"></ul>
+
+  <h3>Load Your Tracks Folder:</h3>
+  <input type="file" id="trackFolder" webkitdirectory multiple>
+
+  <!-- HLS.js for AAC/HLS streams -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
